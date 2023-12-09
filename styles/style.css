@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Open+Sans:wght@300;400&display=swap');
+
+/*************************************** GLOBALES ************************************************/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f7;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/******************************** DESPLEGABLE DE LOS IDIOMAS ***************************************/
+
+.lang {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    transform: scale(.5);
+}
+
+.selectbox {
+    width: 130%;
+    margin: auto;
+    position: relative;
+}
+
+.select {
+    width: 100%;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, .16);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .2s ease all;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    top: 45px;
+}
+
+.select.active,
+.select:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+}
+
+.select.active:before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: 15px solid #213f8f;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    bottom: -30px;
+    left: calc(50% - 15px);
+
+}
+
+.options {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    max-height: 400px;
+    overflow: auto;
+    z-index: 2;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 150%;
+}
+
+.options.active {
+    display: block;
+    animation: fadeIn .3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-200px) scale(.5);
+    }
+    to {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.content-option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: .2s ease all;
+    
+}
+
+.options .content-option {
+    padding: 30px;
+}
+
+.content-option img {
+    width: 60px;
+    height: 60px;
+}
+
+.options .content-option:hover {
+    background: #213f8f;
+}
+
+/******************************** MENU DE LENGUAJES Y LOGIN ***************************************/
+
+.menu-lang-login {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    position: relative;
+    top: -40px;
+    right: 40px;
+}
+
+.menu-lang-login li{
+    display: inline-block;
+}
+
+/******************************** MENU DEL BLOG *****************************************/
+.menu-blog {
+    margin: auto;
+    padding: 0 60px 0 0;
+}
+
+.menu-blog li{
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 400;
+}
+/******************************************* BOTONES DEL LOGIN ***************************************/
+
+.login {
+    margin: auto;
+}
+
+.login li {
+    display: inline-block;
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+.login li span {
+    display: none;
+    color: #213f8f;
+}
+
+.login ul li img {
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: 3px;
+    right: 5px;
+
+}
+
+/******************************************* LOGO ***************************************/
+
+.logo {
+    font-family: 'Leckerli One', cursive;
+    text-align: center;
+}
+
+/******************************************* MENU DEL NAV ***************************************/
+
+.menu-nav {
+    margin-top: 50px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+    margin: 30px 10% 0 10%;
+}
+
+.menu-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/******************************************* INDEX MAIN ***************************************/
+
+.img-index {
+    margin: 5% 5%;
+    background-image: url('../static/img/index.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+.img-index h2 {
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    color: white;
+    font-size: 6vh;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+.bars_menu {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.bars_menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #213f8f;
+    margin-top: 10px;
+    transform-origin: 0px 100%;
+    transition: all 400ms;
+}
+
+.activeline1_bars-menu {
+    transform: rotate(45deg) translate(3.5px, 1px);
+}
+
+.activeline2_bars-menu {
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.activeline3_bars-menu {
+    transform: rotate(-45deg)
+    translate(2px, 2px);
+}
+.menu {
+    display: none;
+}
+
+.activemenu {
+    display: block;
+    background-color: #fff;
+    z-index: 200;
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.flags img{
+    display: inline-block;
+    width: 30px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    
+}
+
+.menu ul li {
+    list-style: none;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 625px) {
+    .menu-lang-login {
+        display: none;
+    }
+
+    .menu-nav {
+        display: none;
+    }
+
+
+
+    .logo {
+        position: relative;
+        top: 25px;
+        margin-bottom: 50px;
+    }
+
+    .img-index h2 {
+        top: 300px;
+    }
+
+    .bars_menu {
+        display: block;
+    }
+}
