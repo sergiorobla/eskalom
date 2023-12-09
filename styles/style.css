@@ -173,6 +173,8 @@ a {
 .logo {
     font-family: 'Leckerli One', cursive;
     text-align: center;
+    max-width: 150px;
+    margin: 0 auto;
 }
 
 /******************************************* MENU DEL NAV ***************************************/
@@ -215,12 +217,14 @@ a {
     transition: all 0.5s;
 }
 
+/******************************************** BOTON RESPONSIVE *********************************/
+
 .bars_menu {
     display: none;
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 40px;
+    top: 23px;
     left: 40px;
     cursor: pointer;
     z-index: 100;
@@ -261,15 +265,52 @@ a {
     top: 90px;
     width: 100%;
     padding: 20px;
-    text-align: center;
+    
+}
+
+.menu ul li {
+    text-align: right;
+    margin-right: 50px;
+}
+
+
+/******************************* MENU DE LOS IDIOMAS RESPONSIVE ************************************/
+.img-flag{
+    width: 40px;
+    height:39px;
+    position: absolute;
+    top: 0px;
+    left: 35px;
+}
+
+.angle-right {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 90px;
+    top: 7px;
+}
+
+.flags{
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 35px;
+    min-height: 500px;
+}
+
+.activeflags {
+    display: block;
+    animation: fadeIn .3s forwards;
+
 }
 
 .flags img{
     display: inline-block;
-    width: 30px;
+    width: 40px;
+    height:50px;
     margin-right: 20px;
     padding-bottom: 10px;
-    
 }
 
 .menu ul li {
@@ -278,6 +319,14 @@ a {
     padding-bottom: 20px;
 }
 
+
+
+.menu-flags {
+    cursor: pointer;
+}
+
+
+/********************************** MEDIA PARA EL RESPONSIVE *********************************************/
 @media screen and (max-width: 625px) {
     .menu-lang-login {
         display: none;
