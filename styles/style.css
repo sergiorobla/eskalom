@@ -195,12 +195,13 @@ a {
 /******************************************* INDEX MAIN ***************************************/
 
 .img-index {
-    margin: 5% 5%;
+    margin: 2% 5%;
     background-image: url('../static/img/index.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 500px;
+    min-height: 400px;
+    border-radius: 20px;
 }
 
 .img-index h2 {
@@ -225,7 +226,7 @@ a {
     height: 30px;
     position: absolute;
     top: 23px;
-    left: 40px;
+    left: 20px;
     cursor: pointer;
     z-index: 100;
 }
@@ -264,7 +265,7 @@ a {
     position: absolute;
     top: 90px;
     width: 100%;
-    height: 505px;
+    height: 405px;
     padding: 20px;
     
 }
@@ -363,6 +364,18 @@ a {
     width: 15px;
     height: 15px;
 }
+
+.login-res {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.login-res img{
+    width: 30px;
+    margin-right: 10px;
+}
 /********************************** MEDIA PARA EL RESPONSIVE *********************************************/
 @media screen and (max-width: 625px) {
     .menu-lang-login {
@@ -372,8 +385,6 @@ a {
     .menu-nav {
         display: none;
     }
-
-
 
     .logo {
         position: relative;
@@ -386,6 +397,10 @@ a {
     }
 
     .bars_menu {
+        display: block;
+    }
+
+    .login-res {
         display: block;
     }
 }
