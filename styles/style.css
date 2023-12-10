@@ -356,6 +356,13 @@ a {
 .pag {
     margin-right: 50px;
 }
+
+.pag li img {
+    position: relative;
+    top: 2px;
+    width: 15px;
+    height: 15px;
+}
 /********************************** MEDIA PARA EL RESPONSIVE *********************************************/
 @media screen and (max-width: 625px) {
     .menu-lang-login {
