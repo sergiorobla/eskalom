@@ -259,18 +259,21 @@ a {
 
 .activemenu {
     display: block;
-    background-color: #fff;
+    background-color: #f4f4f7;
     z-index: 200;
     position: absolute;
     top: 90px;
     width: 100%;
+    height: 505px;
     padding: 20px;
     
 }
 
-.menu ul li {
+.pag li {
     text-align: right;
-    margin-right: 50px;
+    list-style: none;
+    font-size: 20px;
+    padding-bottom: 30px;
 }
 
 
@@ -283,7 +286,7 @@ a {
     left: 35px;
 }
 
-.angle-right {
+.angle-down {
     width: 25px;
     height: 25px;
     position: absolute;
@@ -291,18 +294,47 @@ a {
     top: 7px;
 }
 
+.activeAngle-down {
+    display: none;
+}
+
+.angle-up {
+    display: none;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 90px;
+    top: 7px;
+}
+
+.activeAngle-up {
+    display: block;
+}
+
 .flags{
     display: none;
     position: absolute;
     top: 70px;
     left: 35px;
-    min-height: 500px;
+    transition: transform 0.3s ease-in-out;
+    max-height: 200px;
+    overflow: auto;
 }
 
 .activeflags {
     display: block;
-    animation: fadeIn .3s forwards;
+    transform: translateX(0); /* Posición inicial */
+    animation: slideIn 0.3s forwards;
 
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Mueve los elementos fuera de la pantalla a la izquierda */
+    }
+    to {
+        transform: translateX(0); /* Muestra los elementos en su posición original */
+    }
 }
 
 .flags img{
@@ -313,19 +345,17 @@ a {
     padding-bottom: 10px;
 }
 
-.menu ul li {
-    list-style: none;
-    font-size: 20px;
+.flags li {
     padding-bottom: 20px;
 }
-
-
 
 .menu-flags {
     cursor: pointer;
 }
 
-
+.pag {
+    margin-right: 50px;
+}
 /********************************** MEDIA PARA EL RESPONSIVE *********************************************/
 @media screen and (max-width: 625px) {
     .menu-lang-login {
