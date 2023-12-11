@@ -1,406 +1,341 @@
 @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Open+Sans:wght@300;400&display=swap');
-
 /*************************************** GLOBALES ************************************************/
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
 }
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f4f4f7;
+ body {
+     font-family: 'Open Sans', sans-serif;
+     background-color: #f4f4f7;
 }
-
-a {
-    text-decoration: none;
-    color: #000;
+ a {
+     text-decoration: none;
+     color: #000;
 }
-
 /******************************** DESPLEGABLE DE LOS IDIOMAS ***************************************/
-
-.lang {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    transform: scale(.5);
+ .lang {
+     width: 90%;
+     max-width: 1000px;
+     margin: auto;
+     transform: scale(.5);
 }
-
-.selectbox {
-    width: 130%;
-    margin: auto;
-    position: relative;
+ .selectbox {
+     width: 130%;
+     margin: auto;
+     position: relative;
 }
-
-.select {
-    width: 100%;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, .16);
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: .2s ease all;
-    padding: 30px;
-    position: relative;
-    z-index: 1;
-    top: 45px;
+ .select {
+     width: 100%;
+     box-shadow: 0px 0px 0px rgba(0, 0, 0, .16);
+     border-radius: 10px;
+     cursor: pointer;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     transition: .2s ease all;
+     padding: 30px;
+     position: relative;
+     z-index: 1;
+     top: 45px;
 }
-
-.select.active,
-.select:hover {
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+ .select.active, .select:hover {
+     box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
 }
-
-.select.active:before {
-    content: "";
-    display: block;
-    height: 0;
-    width: 0;
-    border-top: 15px solid #213f8f;
-    border-right: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 15px solid transparent;
-    position: absolute;
-    bottom: -30px;
-    left: calc(50% - 15px);
-
+ .select.active:before {
+     content: "";
+     display: block;
+     height: 0;
+     width: 0;
+     border-top: 15px solid #213f8f;
+     border-right: 15px solid transparent;
+     border-bottom: 15px solid transparent;
+     border-left: 15px solid transparent;
+     position: absolute;
+     bottom: -30px;
+     left: calc(50% - 15px);
 }
-
-.options {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
-    max-height: 400px;
-    overflow: auto;
-    z-index: 2;
-    width: 100%;
-    display: none;
-    position: absolute;
-    top: 150%;
+ .options {
+     background: #fff;
+     border-radius: 10px;
+     box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+     max-height: 400px;
+     overflow: auto;
+     z-index: 2;
+     width: 100%;
+     display: none;
+     position: absolute;
+     top: 150%;
 }
-
-.options.active {
-    display: block;
-    animation: fadeIn .3s forwards;
+ .options.active {
+     display: block;
+     animation: fadeIn .3s forwards;
 }
-
-@keyframes fadeIn {
-    from {
-        transform: translateY(-200px) scale(.5);
+ @keyframes fadeIn {
+     from {
+         transform: translateY(-200px) scale(.5);
     }
-    to {
-        transform: translateY(0) scale(1);
+     to {
+         transform: translateY(0) scale(1);
     }
 }
-
-.content-option {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    transition: .2s ease all;
-    
+ .content-option {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     transition: .2s ease all;
 }
-
-.options .content-option {
-    padding: 30px;
+ .options .content-option {
+     padding: 30px;
 }
-
-.content-option img {
-    width: 60px;
-    height: 60px;
+ .content-option img {
+     width: 60px;
+     height: 60px;
 }
-
-.options .content-option:hover {
-    background: #213f8f;
+ .options .content-option:hover {
+     background: #213f8f;
 }
-
 /******************************** MENU DE LENGUAJES Y LOGIN ***************************************/
-
-.menu-lang-login {
-    display: flex;
-    align-items: center; /* Alinea los elementos verticalmente en el centro */
-    justify-content: flex-end; /* Alinea los elementos a la derecha */
-    position: relative;
-    top: -40px;
-    right: 40px;
+ .menu-lang-login {
+     display: flex;
+     align-items: center;
+    /* Alinea los elementos verticalmente en el centro */
+     justify-content: flex-end;
+    /* Alinea los elementos a la derecha */
+     position: relative;
+     top: -40px;
+     right: 40px;
 }
-
-.menu-lang-login li{
-    display: inline-block;
+ .menu-lang-login li{
+     display: inline-block;
 }
-
 /******************************** MENU DEL BLOG *****************************************/
-.menu-blog {
-    margin: auto;
-    padding: 0 60px 0 0;
+ .menu-blog {
+     margin: auto;
+     padding: 0 60px 0 0;
 }
-
-.menu-blog li{
-    display: inline-block;
-    margin-right: 15px;
-    font-weight: 400;
+ .menu-blog li{
+     display: inline-block;
+     margin-right: 15px;
+     font-weight: 400;
 }
 /******************************************* BOTONES DEL LOGIN ***************************************/
-
-.login {
-    margin: auto;
+ .login {
+     margin: auto;
 }
-
-.login li {
-    display: inline-block;
-    font-weight: 400;
-    margin-right: 20px;
+ .login li {
+     display: inline-block;
+     font-weight: 400;
+     margin-right: 20px;
 }
-
-.login li span {
-    display: none;
-    color: #213f8f;
+ .login li span {
+     display: none;
+     color: #213f8f;
 }
-
-.login ul li img {
-    width: 17px;
-    height: 17px;
-    position: relative;
-    top: 3px;
-    right: 5px;
-
+ .login ul li img {
+     width: 17px;
+     height: 17px;
+     position: relative;
+     top: 3px;
+     right: 5px;
 }
-
 /******************************************* LOGO ***************************************/
-
-.logo {
-    font-family: 'Leckerli One', cursive;
-    text-align: center;
-    max-width: 150px;
-    margin: 0 auto;
+ .logo {
+     font-family: 'Leckerli One', cursive;
+     max-width: 150px;
+     position: relative;
+     top: -100px;
+     left: 50px;
 }
-
 /******************************************* MENU DEL NAV ***************************************/
-
-.menu-nav {
-    margin-top: 50px;
-    text-align: center;
-    border-bottom: 1px solid gray;
-    padding-bottom: 20px;
-    margin: 30px 10% 0 10%;
+ .menu-nav {
+     text-align: center;
+     border-bottom: 1px solid gray;
+     padding-bottom: 20px;
+     margin: -90px 10% 0 10%;
 }
-
-.menu-nav li {
-    display: inline-block;
-    margin-right: 20px;
+ .menu-nav li {
+     display: inline-block;
+     margin-right: 20px;
 }
-
 /******************************************* INDEX MAIN ***************************************/
-
-.img-index {
-    margin: 2% 5%;
-    background-image: url('../static/img/index.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 400px;
-    border-radius: 20px;
+ .img-index {
+     margin: 2% 5%;
+     background-image: url('../static/img/artbreeder-upscale.png');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     min-height: 450px;
+     border-radius: 20px;
 }
-
-.img-index h2 {
-    position: absolute;
-    top: 500px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
-    color: white;
-    font-size: 6vh;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
-    padding: 5px;
-    transition: all 0.5s;
+ .img-index h2 {
+     position: absolute;
+     top: 300px;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     z-index: 1;
+     color: white;
+     font-size: 6vh;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+     padding: 5px;
+     transition: all 0.5s;
 }
-
 /******************************************** BOTON RESPONSIVE *********************************/
-
-.bars_menu {
-    display: none;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 23px;
-    left: 20px;
-    cursor: pointer;
-    z-index: 100;
+ .bars_menu {
+     display: none;
+     width: 30px;
+     height: 30px;
+     position: absolute;
+     top: 23px;
+     left: 20px;
+     cursor: pointer;
+     z-index: 100;
 }
-
-.bars_menu span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #213f8f;
-    margin-top: 10px;
-    transform-origin: 0px 100%;
-    transition: all 400ms;
+ .bars_menu span {
+     display: block;
+     width: 100%;
+     height: 2px;
+     background: #213f8f;
+     margin-top: 10px;
+     transform-origin: 0px 100%;
+     transition: all 400ms;
 }
-
-.activeline1_bars-menu {
-    transform: rotate(45deg) translate(3.5px, 1px);
+ .activeline1_bars-menu {
+     transform: rotate(45deg) translate(3.5px, 1px);
 }
-
-.activeline2_bars-menu {
-    opacity: 0;
-    margin-left: -30px;
+ .activeline2_bars-menu {
+     opacity: 0;
+     margin-left: -30px;
 }
-
-.activeline3_bars-menu {
-    transform: rotate(-45deg)
-    translate(2px, 2px);
+ .activeline3_bars-menu {
+     transform: rotate(-45deg) translate(2px, 2px);
 }
-.menu {
-    display: none;
+ .menu {
+     display: none;
 }
-
-.activemenu {
-    display: block;
-    background-color: #f4f4f7;
-    z-index: 200;
-    position: absolute;
-    top: 90px;
-    width: 100%;
-    height: 405px;
-    padding: 20px;
-    
+ .activemenu {
+     display: block;
+     background-color: #f4f4f7;
+     z-index: 200;
+     position: absolute;
+     top: 90px;
+     width: 100%;
+     height: 455px;
+     padding: 20px;
 }
-
-.pag li {
-    text-align: right;
-    list-style: none;
-    font-size: 20px;
-    padding-bottom: 30px;
+ .pag li {
+     text-align: right;
+     list-style: none;
+     font-size: 20px;
+     padding-bottom: 30px;
 }
-
-
 /******************************* MENU DE LOS IDIOMAS RESPONSIVE ************************************/
-.img-flag{
-    width: 40px;
-    height:39px;
-    position: absolute;
-    top: 0px;
-    left: 35px;
+ .img-flag{
+     width: 40px;
+     height:39px;
+     position: absolute;
+     top: 0px;
+     left: 35px;
 }
-
-.angle-down {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    left: 90px;
-    top: 7px;
+ .angle-down {
+     width: 25px;
+     height: 25px;
+     position: absolute;
+     left: 90px;
+     top: 7px;
 }
-
-.activeAngle-down {
-    display: none;
+ .activeAngle-down {
+     display: none;
 }
-
-.angle-up {
-    display: none;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    left: 90px;
-    top: 7px;
+ .angle-up {
+     display: none;
+     width: 25px;
+     height: 25px;
+     position: absolute;
+     left: 90px;
+     top: 7px;
 }
-
-.activeAngle-up {
-    display: block;
+ .activeAngle-up {
+     display: block;
 }
-
-.flags{
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 35px;
-    transition: transform 0.3s ease-in-out;
-    max-height: 200px;
-    overflow: auto;
+ .flags{
+     display: none;
+     position: absolute;
+     top: 70px;
+     left: 35px;
+     transition: transform 0.3s ease-in-out;
+     max-height: 200px;
+     overflow: auto;
 }
-
-.activeflags {
-    display: block;
-    transform: translateX(0); /* Posición inicial */
-    animation: slideIn 0.3s forwards;
-
+ .activeflags {
+     display: block;
+     transform: translateX(0);
+    /* Posición inicial */
+     animation: slideIn 0.3s forwards;
 }
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%); /* Mueve los elementos fuera de la pantalla a la izquierda */
+ @keyframes slideIn {
+     from {
+         transform: translateX(-100%);
+        /* Mueve los elementos fuera de la pantalla a la izquierda */
     }
-    to {
-        transform: translateX(0); /* Muestra los elementos en su posición original */
+     to {
+         transform: translateX(0);
+        /* Muestra los elementos en su posición original */
     }
 }
-
-.flags img{
-    display: inline-block;
-    width: 40px;
-    height:50px;
-    margin-right: 20px;
-    padding-bottom: 10px;
+ .flags img{
+     display: inline-block;
+     width: 40px;
+     height:50px;
+     margin-right: 20px;
+     padding-bottom: 10px;
 }
-
-.flags li {
-    padding-bottom: 20px;
+ .flags li {
+     padding-bottom: 20px;
 }
-
-.menu-flags {
-    cursor: pointer;
+ .menu-flags {
+     cursor: pointer;
 }
-
-.pag {
-    margin-right: 50px;
+ .pag {
+     margin-right: 50px;
 }
-
-.pag li img {
-    position: relative;
-    top: 2px;
-    width: 15px;
-    height: 15px;
+ .pag li img {
+     position: relative;
+     top: 2px;
+     width: 15px;
+     height: 15px;
 }
-
-.login-res {
-    display: none;
-    position: absolute;
-    top: 30px;
-    right: 20px;
+ .login-res {
+     display: none;
+     position: absolute;
+     top: 30px;
+     right: 20px;
 }
-
-.login-res img{
-    width: 30px;
-    margin-right: 10px;
+ .login-res img{
+     width: 30px;
+     margin-right: 10px;
 }
 /********************************** MEDIA PARA EL RESPONSIVE *********************************************/
-@media screen and (max-width: 625px) {
-    .menu-lang-login {
-        display: none;
+ @media screen and (max-width: 765px) {
+     .menu-lang-login {
+         display: none;
     }
-
-    .menu-nav {
-        display: none;
+     .menu-nav {
+         display: none;
     }
-
-    .logo {
-        position: relative;
+     .logo {
+        position: block;
         top: 25px;
+        left: auto;
+        margin: 0 auto;
         margin-bottom: 50px;
+        padding-left: 10px;
     }
-
-    .img-index h2 {
-        top: 300px;
+     .bars_menu {
+         display: block;
     }
-
-    .bars_menu {
-        display: block;
-    }
-
-    .login-res {
-        display: block;
+     .login-res {
+         display: block;
     }
 }
