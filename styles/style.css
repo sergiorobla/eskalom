@@ -319,8 +319,110 @@
      width: 30px;
      margin-right: 10px;
 }
+#contenido {
+    max-height: 60px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    text-align: center;
+    margin: 0 500px;
+  }
+.ver-mas {
+    margin: 10px 0;
+}
+#ver-mas {
+    text-align: center;
+    color: #213f8f;
+    cursor: pointer;
+  }
+.contenido img{
+    width: 500px;
+    padding: 30px;
+}
+.contenido p{
+    text-align: left;
+}
+.cont-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las columnas horizontalmente */
+    align-items: center; /* Centra las columnas verticalmente */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+  }
+.img-venta {
+    flex: 0 0 calc(25% - 20px); /* Establece el ancho deseado con un margen entre columnas */
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center; /* Centra el contenido dentro de cada columna */
+  }
+.img-venta:hover {
+    transform: scale(1.2);
+    background-color: #f4f4f7;
+}
+.img-venta img{
+    width: 300px;
+    max-width: 100%; /* Asegura que la imagen no supere el ancho de su contenedor */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.listas {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.listas .categoria {
+    display: inline-block;
+    margin: 20px 100px;
+}
+.listas h2 {
+    color: #000;
+}
+.categoria {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+.categoria li {
+    list-style: none;
+}
+  .sublista {
+    position: relative;
+  }
+/********************************* ESTILOS DEL FOOTER *************************************************/
+footer {
+    margin: 10px;
+}
+footer a {
+    color:#213f8f;
+    text-decoration: none;
+}
 /********************************** MEDIA PARA EL RESPONSIVE *********************************************/
- @media screen and (max-width: 765px) {
+@media screen and (max-width: 1700px) {
+    #contenido {
+        margin: 0 400px;
+      }
+}
+@media screen and (max-width: 1500px) {
+    #contenido {
+        margin: 0 300px;
+      }
+}
+@media screen and (max-width: 1300px) {
+    #contenido {
+        margin: 0 200px;
+      }
+}
+@media screen and (max-width: 1000px) {
+    #contenido {
+        margin: 0 100px;
+      }
+}
+@media screen and (max-width: 900px) {
+    #contenido {
+        margin: 0 50px;
+      }
+}
+@media screen and (max-width: 767px) {
      .menu-lang-login {
          display: none;
     }
@@ -340,5 +442,17 @@
     }
      .login-res {
          display: block;
+    }
+    #contenido {
+        margin: 0 5px;
+      }
+    .contenido img{
+        width: 300px;
+    }
+    .cont-img {
+        display: block;
+    }
+    .listas .categoria {
+        display: block;
     }
 }
