@@ -383,8 +383,12 @@
 .categoria li {
     list-style: none;
 }
-  .sublista li {
+.sublista li {
     padding: 5px 0;
+}
+.sublista li a:hover {
+    color: #213f8f;
+    font-weight: bold;
 }
 /********************************* ESTILOS DEL FOOTER ***********************************************************/
 footer {
