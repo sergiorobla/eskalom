@@ -51,7 +51,7 @@
                 </ul>
             </nav>
             <div class="login-res">
-                <a href="#"><img src="../../static/img/icons/register.png" alt=""></a>
+                <a href="../login/login.html"><img src="../../static/img/icons/register.png" alt=""></a>
             </div>
             <div class="menu-lang-login">
                 <ul>
@@ -141,14 +141,15 @@
         </header>
         <main>
             <div class="cuntenidu">
-                <h2>PINTURAS ORIGINALES A LA VENTA</h2>
-                <h3>+10K Obras de arte originales, ediciones limitadas e impresiones.</h3>
+                <h2>PINTURAS A LA VENTA</h2>
+                <h3>Obras de arte originales, ediciones limitadas e impresiones.</h3>
             </div>
             <div class="flex-container">
                 <ul class="listas">
                     <li class="categoria">
-                        <h2>Estilos</h2>
-                        <ul class="sublista">
+                        <h2 onclick="toggleSublista('sublista1')">Estilos</h2>
+                        <img src="../../static/img/icons/angle-down.png" alt="">
+                        <ul id="sublista1" class="sublista" style="display: none;">
                             <li><a href="Estilos/realismo.html">Realismo</a></li>
                             <li><a href="Estilos/impresionismo.html">Impresionismo</a></li>
                             <li><a href="Estilos/expresionismo.html">Expresionismo</a></li>
@@ -163,8 +164,9 @@
                     </li>
 
                     <li class="categoria">
-                        <h2>Temas</h2>
-                        <ul class="sublista">
+                        <h2 onclick="toggleSublista('sublista2')">Temas</h2>
+                        <img src="../../static/img/icons/angle-down.png" alt="">
+                        <ul id="sublista2" class="sublista" style="display: none;">
                             <li><a href="Temas/paisajes.html">Paisajes</a></li>
                             <li><a href="Temas/retratos.html">Retratos</a></li>
                             <li><a href="Temas/eras.html">Eras</a></li>
@@ -179,8 +181,9 @@
                     </li>
 
                     <li class="categoria">
-                        <h2>Técnica</h2>
-                        <ul class="sublista">
+                        <h2 onclick="toggleSublista('sublista3')">Técnica</h2>
+                        <img src="../../static/img/icons/angle-down.png" alt="">
+                        <ul id="sublista3" class="sublista" style="display: none;">
                             <li><a href="Tecnica/acuarela.html">Acuarela</a></li>
                             <li><a href="Tecnica/espatula.html">Espátula</a></li>
                             <li><a href="Tecnica/estarcido.html">Estarcido</a></li>
@@ -288,7 +291,7 @@
     <script src="../../static/js/menuLanguage.js"></script>
     <script src="../../static/js/botonMenuResp.js"></script>
     <script src="../../static/js/menuRespon.js"></script>
-    <script src="../../static/js/leerMas.js"></script>
+    <script src="../../static/js/menuDesplegable.js"></script>
 </body>
 
 </html>

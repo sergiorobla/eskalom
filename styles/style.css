@@ -372,19 +372,33 @@
     margin: 0 auto;
 }
 .listas {
-    flex: 0 0 calc(10% - 20px);
-    text-align: left;
-    list-style-type: none;
+    list-style: none;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
 }
 .listas .categoria {
-    display: inline-block;
-    margin: 20px 100px;
+    margin: 20px auto;
 }
 .categoria li {
     list-style: none;
 }
+.categoria h2 {
+    margin: 10px 0;
+    cursor: pointer;
+}
+.categoria img {
+    width: 20px;
+    position: relative;
+    top: -33px;
+    right: -60px;
+}
 .sublista li {
     padding: 5px 0;
+}
+.sublista {
+    display: none;
+    margin-top: -30px;
 }
 .sublista li a:hover {
     color: #213f8f;
@@ -429,6 +443,9 @@ footer a {
     .listas {
         display: block;
         text-align: center;
+    }
+    .listas .categoria {
+        margin: 20px auto;
     }
     .band > div {
         margin: 0 10%;
