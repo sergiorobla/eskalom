@@ -381,6 +381,9 @@
     margin-right: 200px;
 }
 .text-index h3 {
+    position: relative;
+    left:-15%;
+    font-size: 40px;
     font-weight: 200;
     text-transform: uppercase;
     text-align: center;
@@ -461,6 +464,31 @@
     color: #213f8f;
     font-weight: bold;
 }
+.regist {
+    background-color: #283557;
+    display: flex;
+    margin: 0;
+    margin-top: 50px;
+    padding: 30px;
+    align-items: center;
+}
+.regist h3 {
+    color: #f4f4f7;
+}
+.regist-form {
+    width: 100%;
+    text-align: right;
+}
+.regist-form input {
+    width: 100px;
+    padding: 12px;
+
+}
+.regist a {
+    border-radius: 5%;
+    background-color: #f4f4f7;
+    padding: 9px 10px 11.5px 10px;
+}
 /********************************* ESTILOS DEL FOOTER ***********************************************************/
 footer {
     padding-top: 20px;
@@ -506,6 +534,10 @@ footer a {
         border-radius: 5px;
         box-shadow: 10px 10px 15px rgba(0, 0, 0, 3);
     }
+    .text-index h3 {
+        left: 0;
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 767px) {
      .menu-lang-login {
@@ -546,5 +578,8 @@ footer a {
         display: block;
         width: 100%;
         margin: 10px;
+    }
+    .regist {
+        display: block;
     }
 }
